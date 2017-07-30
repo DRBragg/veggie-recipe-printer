@@ -26,6 +26,6 @@ get '/' do
   @name = recipe[:name]
   @ingredients = recipe[:ingredients]
   @directions = recipe[:directions]
-  
+
   erb :index
 end
