@@ -22,10 +22,24 @@ recipe = {
   ]
 }
 
+reviews = [
+  {
+    username: "Drew",
+    rating: 3,
+    review: "Needs some bacon!"
+  },
+  {
+    username: "Joella",
+    rating: 1,
+    review: "I dont like to eat my veggies..."
+  }
+]
+
 get '/' do
   @name = recipe[:name]
   @ingredients = recipe[:ingredients]
   @directions = recipe[:directions]
+  @reviews = reviews
 
   erb :index
 end

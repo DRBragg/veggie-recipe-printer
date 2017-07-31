@@ -19,5 +19,14 @@
 		<li><%= step %></li>
 	<% end %>
 </ol>
+<hr>
+<h3>See what others are saying:</h3>
+<% @reviews.each do |review| %>
+	<div style="border: 1px solid black; padding: 2px; margin-bottom: 4px; width: 30%">
+	<p><b>Username:</b> <%=review[:username] %></p>
+	<p><b>Rating:</b> <%=review[:rating] %></p>
+	<p><b>Review:</b> <%=review[:review] %></p>
+	</div>
+<% end %>
 </body>
 </html>
